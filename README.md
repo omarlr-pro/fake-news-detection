@@ -99,6 +99,4 @@ streamlit
 
 Made with ❤️ by [Omar Laraje](https://github.com/omarlr-pro)
 
-## 📝 License
 
-This project is licensed under the **MIT License**. See the `LICENSE` file for more details.
