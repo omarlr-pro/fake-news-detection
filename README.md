@@ -38,7 +38,7 @@ This project is a web-based Fake News Detection system built with **Streamlit** 
 
 ![Screenshot](assets/Screenshot2025-05-09172828.png)
 ![Screenshot](assets/Screenshot2025-05-09173048.png)
-![Screenshot](assets/Screenshot2025-05-09173228.png)
+![Screenshot](assets/Screenshot2025-05-09172828.png)
 
 
 
