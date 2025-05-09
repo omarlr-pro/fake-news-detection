@@ -36,7 +36,7 @@ This project is a web application that detects whether a given news article is *
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/fake-news-detection.git
+git clone https://github.com/omarlr-pro/fake-news-detection.git
 cd fake-news-detection
 ```
 
@@ -97,6 +97,6 @@ streamlit
 
 ## 🙋‍♂️ Author
 
-Made with ❤️ by [Omar Laraje](https://github.com/omarlr-pro)
+Made with ❤️ by [Omar Laraje](https://www.linkedin.com/in/omar-laraje/)
 
 
