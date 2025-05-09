@@ -1,18 +1,17 @@
 import streamlit as st
 import pickle
 
-# Load trained models
-nb_model = pickle.load(open("naive_bayes.pkl", "rb"))
-lr_model = pickle.load(open("logistic_model.pkl", "rb"))
-vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
+# Load models from models/ folder
+nb_model = pickle.load(open("models/naive_bayes.pkl", "rb"))
+lr_model = pickle.load(open("models/logistic_model.pkl", "rb"))
+vectorizer = pickle.load(open("models/vectorizer.pkl", "rb"))
 
+# Streamlit UI
 st.set_page_config(page_title="Fake News Detector", page_icon="📰")
 st.title("📰 Fake News Detection")
-
 st.markdown("Enter a news article below to check whether it is **Fake** or **Real**.")
 
 classifier = st.radio("Choose a model:", ["Logistic Regression", "Naive Bayes"], horizontal=True)
-
 news_text = st.text_area("📝 News Content", height=300)
 
 if st.button("🔍 Analyze"):                              

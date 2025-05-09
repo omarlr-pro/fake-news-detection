@@ -1,102 +1,139 @@
-# 📰 Fake News Detection with Streamlit
 
-This project is a web application that detects whether a given news article is **real** or **fake** using Natural Language Processing (NLP) and machine learning. It is built using Python, scikit-learn, and Streamlit to provide a clean and interactive interface.
+# 📰 Fake News Detection Web App
 
-## 📌 Features
+This project is a web-based Fake News Detection system built with **Streamlit** and trained using **Logistic Regression** and **Naive Bayes** models. It uses **TF-IDF vectorization** and processes real and fake news articles to classify them accurately.
 
-- Input news text and detect if it's fake or real
-- Built-in models: **Naive Bayes** and **Logistic Regression**
-- Utilizes **TF-IDF** vectorization for text preprocessing
-- User-friendly web interface with **Streamlit**
-- Based on a real-world dataset from **Kaggle**
+---
 
-## 🧠 Models Used
+## 🚀 Features
 
-- **TF-IDF Vectorizer**: Transforms text data into feature vectors
-- **Multinomial Naive Bayes**: A probabilistic classifier
-- **Logistic Regression**: A linear model for binary classification
+- Binary classification: **Real vs Fake news**
+- Choose between **Logistic Regression** and **Naive Bayes**
+- Cleaned and preprocessed news data
+- Streamlit interface for interactive usage
+- Trained models and vectorizer stored in `models/` folder
+- Custom preprocessing with **NLTK**, **lemmatization**, and **stopword removal**
 
-## 📁 Dataset
+---
 
-- Source: [Fake and Real News Dataset on Kaggle](https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset)
-- The dataset consists of two CSV files: `Fake.csv` and `True.csv`
-- Place both files in the root directory or modify the file paths in the script accordingly
+## 📁 Project Structure
 
-## 🖥️ Technologies
+```
+.
+├── app.py                # Streamlit app for real-time prediction
+├── train_model.py        # Script to clean data, train models and save them
+├── data/
+│   ├── Fake.csv          # Dataset containing fake news
+│   └── True.csv          # Dataset containing real news
+├── models/
+│   ├── logistic_model.pkl
+│   ├── naive_bayes.pkl
+│   └── vectorizer.pkl
+└── README.md             # Project documentation
+```
 
-- Python 3.9+
-- pandas
-- numpy
-- scikit-learn
-- nltk
-- streamlit
+---
+
+## 📷 Screenshot
+
+![Screenshot](assets/Screenshot2025-05-09172828.png)
+![Screenshot](assets/Screenshot2025-05-09173048.png)
+![Screenshot](assets/Screenshot2025-05-09173228.png)
+
+
+
+---
+
+## 🧪 How It Works
+
+1. Load datasets from `data/Fake.csv` and `data/True.csv`
+2. Label them (Fake=1, Real=0)
+3. Preprocess text:
+   - Lowercasing
+   - Remove punctuation
+   - Remove stopwords
+   - Lemmatization
+4. Train models using TF-IDF + Logistic Regression / Naive Bayes
+5. Save models in `models/` using `pickle`
+6. Load in Streamlit to predict and visualize results interactively
+
+---
 
 ## 📦 Installation
 
-### 1. Clone the Repository
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/omarlr-pro/fake-news-detection.git
-cd fake-news-detection
+git clone https://github.com/your-username/fake-news-detector.git
+cd fake-news-detector
 ```
 
-### 2. Create a Virtual Environment
+### 2. Create a virtual environment
 
 ```bash
 python -m venv .venv
+# Activate it:
+# On Windows:
+.venv\Scripts\activate
+# On macOS/Linux:
+source .venv/bin/activate
 ```
 
-Activate the virtual environment:
-
-- On Windows:
-  ```bash
-  .venv\Scripts\activate
-  ```
-- On macOS/Linux:
-  ```bash
-  source .venv/bin/activate
-  ```
-
-### 3. Install Dependencies
+### 3. Install dependencies
 
 ```bash
 pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
 ```
 
-If you face a `distutils` error, run this (Ubuntu/Debian only):
+### 4. Run the project
 
 ```bash
-sudo apt install python3-distutils
+python train_model.py     # Preprocesses data, trains and saves models
+streamlit run app.py      # Launches the web app
 ```
 
-## 🚀 Run the App
+---
 
-```bash
-streamlit run app.py
-```
+## ✅ Requirements
 
-The app will launch in your browser at: [http://localhost:8501](http://localhost:8501)
-
-## 🧪 Example Usage
-
-1. Enter any news text into the input box
-2. Select the model (Naive Bayes or Logistic Regression)
-3. Click **Predict**
-4. Get an instant result: ✅ Real or ❌ Fake
-
-## 📄 requirements.txt
+Here’s the content for `requirements.txt`:
 
 ```
-numpy==1.24.4
-pandas==1.5.3
+streamlit
+pandas
+numpy
 scikit-learn
 nltk
-streamlit
 ```
+
+---
+
+## 🧠 Models Used
+
+- **Logistic Regression** – fast linear classifier
+- **Multinomial Naive Bayes** – well-suited for word frequencies
+- **TF-IDF Vectorizer** – converts text to numerical vectors
+
+---
+
+## 📂 Datasets
+
+Used Kaggle's [Fake and Real News Dataset](https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset)
+
+Place both CSVs inside the `data/` directory:
+
+- `data/Fake.csv`
+- `data/True.csv`
+
+---
+
+
+---
 
 ## 🙋‍♂️ Author
 
-Made with ❤️ by [Omar Laraje](https://www.linkedin.com/in/omar-laraje/)
-
-
+- **Omar Laraje**  
+  [GitHub](https://github.com/omarlr-pro)  
+  [LinkedIn](https://www.linkedin.com/in/omar-laraje-998827233/)  
+  
