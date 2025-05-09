@@ -29,7 +29,7 @@ This project is a web application that detects whether a given news article is *
 - numpy
 - scikit-learn
 - nltk
-- Streamlit
+- streamlit
 
 ## 📦 Installation
 
@@ -38,3 +38,67 @@ This project is a web application that detects whether a given news article is *
 ```bash
 git clone https://github.com/your-username/fake-news-detection.git
 cd fake-news-detection
+```
+
+### 2. Create a Virtual Environment
+
+```bash
+python -m venv .venv
+```
+
+Activate the virtual environment:
+
+- On Windows:
+  ```bash
+  .venv\Scripts\activate
+  ```
+- On macOS/Linux:
+  ```bash
+  source .venv/bin/activate
+  ```
+
+### 3. Install Dependencies
+
+```bash
+pip install --upgrade pip setuptools wheel
+pip install -r requirements.txt
+```
+
+If you face a `distutils` error, run this (Ubuntu/Debian only):
+
+```bash
+sudo apt install python3-distutils
+```
+
+## 🚀 Run the App
+
+```bash
+streamlit run app.py
+```
+
+The app will launch in your browser at: [http://localhost:8501](http://localhost:8501)
+
+## 🧪 Example Usage
+
+1. Enter any news text into the input box
+2. Select the model (Naive Bayes or Logistic Regression)
+3. Click **Predict**
+4. Get an instant result: ✅ Real or ❌ Fake
+
+## 📄 requirements.txt
+
+```
+numpy==1.24.4
+pandas==1.5.3
+scikit-learn
+nltk
+streamlit
+```
+
+## 🙋‍♂️ Author
+
+Made with ❤️ by [Omar Laraje](https://github.com/omarlr-pro)
+
+## 📝 License
+
+This project is licensed under the **MIT License**. See the `LICENSE` file for more details.
