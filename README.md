@@ -1,5 +1,13 @@
 # Détection de Fake News - Application Web
 
+![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Stars](https://img.shields.io/github/stars/omarlr-pro/fake-news-detection?style=social)
+![Forks](https://img.shields.io/github/forks/omarlr-pro/fake-news-detection?style=social)
+![Issues](https://img.shields.io/github/issues/omarlr-pro/fake-news-detection)
+![Last Commit](https://img.shields.io/github/last-commit/omarlr-pro/fake-news-detection)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?logo=scikit-learn&logoColor=white)
 Application web de détection de fausses informations construite avec Streamlit et entraînée avec des modèles de Régression Logistique et Naive Bayes. Elle utilise la vectorisation TF-IDF et traite des articles d'actualité réels et faux pour les classifier avec précision.
 
 ## Mots-clés
